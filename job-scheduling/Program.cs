@@ -32,6 +32,9 @@ namespace job_scheduling
                 .AddUserSecrets<Program>(); // must also define a project guid for secrets in the .cspro – add tag <UserSecretsId> containing a guid
             var Configuration = builder.Build();
 
+            Console.WriteLine(Configuration["DYNAMICS_ODATA_URI"]);
+            Console.WriteLine(Configuration["DYNAMICS_JOB_NAME"]);
+
             string dynamicsOdataUri = Configuration["DYNAMICS_ODATA_URI"]; // Dynamics ODATA endpoint
             string dynamicsJobName = Configuration["DYNAMICS_JOB_NAME"]; // Dynamics Job Name
 
