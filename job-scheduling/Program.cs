@@ -51,11 +51,17 @@ namespace job_scheduling
 
             // One Premise ADFS (2016)
             string adfsOauth2Uri = Configuration["ADFS_OAUTH2_URI"]; // ADFS OAUTH2 URI - usually /adfs/oauth2/token on STS
+            Console.WriteLine(Configuration["ADFS_OAUTH2_URI"]);
             string applicationGroupResource = Configuration["DYNAMICS_APP_GROUP_RESOURCE"]; // ADFS 2016 Application Group resource (URI)
+            Console.WriteLine(Configuration["DYNAMICS_APP_GROUP_RESOURCE"]);
             string applicationGroupClientId = Configuration["DYNAMICS_APP_GROUP_CLIENT_ID"]; // ADFS 2016 Application Group Client ID
+            Console.WriteLine(Configuration["DYNAMICS_APP_GROUP_CLIENT_ID"]);
             string applicationGroupSecret = Configuration["DYNAMICS_APP_GROUP_SECRET"]; // ADFS 2016 Application Group Secret
+            Console.WriteLine(Configuration["DYNAMICS_APP_GROUP_SECRET"]);
             string serviceAccountUsername = Configuration["DYNAMICS_USERNAME"]; // Service account username
+            Console.WriteLine(Configuration["DYNAMICS_USERNAME"]);
             string serviceAccountPassword = Configuration["DYNAMICS_PASSWORD"]; // Service account password
+            Console.WriteLine(Configuration["DYNAMICS_PASSWORD"]);
 
             // API Gateway to NTLM user.  This is used in v8 environments.  Note that the SSG Username and password are not the same as the NTLM user.
             string ssgUsername = Configuration["SSG_USERNAME"];  // BASIC authentication username
